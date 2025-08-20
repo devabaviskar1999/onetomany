@@ -19,7 +19,7 @@ public class Department {
     private Long id;
     @Column(unique = true, nullable = false)
     private String name;
-    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "department")
     @JsonManagedReference
     private List<Employee> employeeList = new ArrayList<>();
 
